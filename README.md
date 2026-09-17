@@ -70,14 +70,14 @@ The notebook data flow is:
 
 ```mermaid
 flowchart LR
-    S[Symbols and constants] --> T[boost_fields(E, B, v)]
-    S --> F[field_tensor(E, B)]
-    S --> L[lorentz_boost_x(v)]
-    F --> X[F' = Lambda F Lambda^T]
+    S[Symbols and constants] --> T["boost_fields(E, B, v)"]
+    S --> F["field_tensor(E, B)"]
+    S --> L["lorentz_boost_x(v)"]
+    F --> X["F' = Lambda F Lambda^T"]
     L --> X
     T --> C[Compare transformed components]
     X --> C
-    C --> I[Check E^2 - c^2 B^2 and E dot B]
+    C --> I["Check E^2 - c^2 B^2 and E dot B"]
     S --> W[Wire force calculation]
     W --> P[Plot E/B mixing versus beta]
 ```
